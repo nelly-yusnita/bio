@@ -10,9 +10,6 @@
 	<!-- ===== BOXICONS ===== -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-	<!-- ===== AOS ANIMATE CSS ===== -->
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-
 	<!-- ===== MAIN CSS ===== -->
 	<style>
 		/* ===== GOOGLE FONTS ===== */
@@ -103,6 +100,8 @@
 		/* ===== LAYOUT ===== */
 		.container{
 		   max-width: 1024px;
+		   margin-left: var(--mb-1-5);
+		   margin-right: var(--mb-1-5);
 		}
 		.grid{
 		   display: -ms-grid;
@@ -154,7 +153,7 @@
 
 		/* ===== MAIN ===== */
 		.main{
-			padding: 2rem;
+			padding: 2rem 0 2rem;
 		}
 		.nav__theme{
 			font-size: 1.1rem;
@@ -205,23 +204,14 @@
 			margin-bottom: var(--mb-1-5);
 		}
 		.social__media{
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-align: center;
-			    -ms-flex-align: center;
-			        align-items: center;
-			-webkit-box-pack: center;
-			    -ms-flex-pack: center;
-			        justify-content: center;
-			-webkit-column-gap: .75rem;
-			   -moz-column-gap: .75rem;
-			        column-gap: .75rem;
 			margin-bottom: var(--mb-2);
 		}
 		.social__media-link{
 			color: var(--black-color);
 			font-size: 1.5rem;
+		}
+		.social__media-link:not(:last-child){
+		   margin-right: .85rem;
 		}
 		.footer{
 			display: block;
@@ -233,6 +223,13 @@
 
 		/* ===== MEDIA QUERIS ===== */
 		@media screen and (max-width: 320px){
+			/* ===== LAYOUT ===== */
+		   .container{
+		      margin-left: var(--mb-1);
+		      margin-right: var(--mb-1);
+		   }
+		   /* ===== end layout ===== */
+
 			/* ===== MAIN ===== */
 			.main__container{
 				padding-top: 3.5rem;
@@ -246,26 +243,6 @@
 				left: 1.5rem;
 			}
 		   /* ===== end main ===== */
-		}
-
-		@media screen and (max-width: 385px){
-		   /* ===== LAYOUT ===== */
-		   .container{
-		      width: calc(100% - 2rem);
-		      margin-left: var(--mb-1);
-		      margin-right: var(--mb-1);
-		   }
-		   /* ===== end layout ===== */
-		}
-
-		@media screen and (min-width: 576px){
-		   /* ===== LAYOUT ===== */
-		   .container{
-		      width: calc(100% - 4rem);
-		      margin-left: var(--mb-2);
-		      margin-right: var(--mb-2);
-		   }
-		   /* ===== end layout ===== */
 		}
 
 		@media screen and (min-width: 768px){
@@ -300,15 +277,15 @@
 		</div>
 
 		<div class="main__container">
-			<div class="main__images" data-aos="fade-down">
+			<div class="main__images">
 				<img src="assets/img/profile.jpg" alt="" class="main__img">
 			</div>
-			<h1 class="main__title" data-aos="fade-down">Nelly Yusnita</h1>
-			<span class="main__subtitle" data-aos="fade-down">Economy Teacher<br>Freelance Frontend Developer</span>
+			<h1 class="main__title">Nelly Yusnita</h1>
+			<span class="main__subtitle">Economy Teacher<br>Freelance Frontend Developer</span>
 			<div class="social__media">
 				<a href="https://www.instagram.com/nellyyusnita_/" class="social__media-link"><i class='bx bxl-instagram'></i></a>
 				<a href="https://www.facebook.com/profile.php?id=100009298274433" class="social__media-link"><i class='bx bxl-facebook'></i></a>
-				<a href="tiktok.com/@nelly_yusnita" class="social__media-link"><i class='bx bxl-tiktok'></i></a>
+				<a href="https://www.tiktok.com/@nelly_yusnita" class="social__media-link"><i class='bx bxl-tiktok'></i></a>
 				<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="social__media-link"><i class='bx bxl-youtube'></i></a>
 			</div>
 			<div class="main__links">
@@ -316,7 +293,7 @@
 					<a href="https://nelly-yusnita.github.io/portfolio/" class="links__item">My Portfolio</a>
 				</div>
 				<div class="button">
-					<a href="https://undang-digital-aja.github.io/main/" class="links__item">Wedding Invitation</a>
+					<a href="https://undang-digital-aja.github.io/main/" class="links__item">Visit My Online Store</a>
 				</div>
 				<div class="button">
 					<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="links__item">Tutorials</a>
@@ -356,25 +333,6 @@
 			localStorage.setItem('selected-icon', getCurrentIcon())
 		})
 		// ===== end dark light theme ===== //
-
-		// ===== AOS ANIMATE ===== //
-		const socialMediaLink = document.querySelectorAll('.social__media-link');
-		socialMediaLink.forEach((n, i) => {
-			n.dataset.aos = 'flip-right';
-			n.dataset.aosDelay = i * 100;
-		});
-
-		const button = document.querySelectorAll('.button');
-		button.forEach((n, i) => {
-			n.dataset.aos = 'fade-down';
-			n.dataset.aosDelay = i * 100;
-		});
-
-		AOS.init({
-			duration: 1500,
-			once: true,  
-		});
-		// ===== end aos animate ===== //
 	</script>	
 	<!-- ===== end main javascript ===== -->
 </body>
