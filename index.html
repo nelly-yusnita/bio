@@ -5,339 +5,66 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- ===== FAVICON ==== -->
-	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="assets/img/favicon.jpg" type="image/x-icon">
+
+	<!-- ===== MAIN CSS ===== -->
+	<link rel="stylesheet" href="assets/css/style.css">
 
 	<!-- ===== BOXICONS ===== -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-	<!-- ===== MAIN CSS ===== -->
-	<style>
-		/* ===== GOOGLE FONTS ===== */
-		@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600;700&display=swap');
-
-		/* ===== VARIABLES CSS ===== */
-		:root{
-		   /* ===== Colors ===== */
-		   --white-color: #FAFAFF; /* White */
-		   --black-color: #141414; /* Black */
-		   --blue-lightest-color: #90AACB; 
-		   --blue-light-color: #577BC1; /* Light Blue */
-		   --blue-darker-color: #35589A; /* Blue Darker */
-		   --pure-white-color: #FFFFFF; /* Pure White */
-
-		   /* ===== Font and Typography ===== */
-		   --title-font: 'Abril Fatface', cursive;
-		   --text-font: 'Poppins', sans-serif;
-		   --biggest-font-size: 2.5rem;
-		   --big-font-size: 2rem;
-		   --h1-font-size: 1.4rem;
-		   --h2-font-size: 1.25rem;
-		   --h3-font-size: 1rem;
-		   --normal-font-size: .938rem;
-		   --small-font-size: .813rem;
-		   --smaller-font-size: .75rem;
-
-		   /* ===== Font Weight ===== */
-		   --regular-font: 400;
-		   --medium-font: 500;
-		   --semi-bold-font: 600;
-		   --bold-font: 700;
-
-		   /* ===== Margin Bottom ===== */
-		   --mb-0-25: .25rem;
-		   --mb-0-5: .5rem;
-		   --mb-0-75: .75rem;
-		   --mb-1: 1rem;
-		   --mb-1-5: 1.5rem;
-		   --mb-2: 2rem;
-		   --mb-2-5: 2.5rem;
-		   --mb-3: 3rem;
-		}
-		/* ===== end variables css ===== */
-
-		/* Responsive Typography */
-		@media screen and (min-width: 768px){
-		   :root{
-		      --biggest-font-size: 3.7rem;
-		      --big-font-size: 2.5rem;
-		      --h1-font-size: 2.25rem;
-		      --h2-font-size: 1.5rem;
-		      --h3-font-size: 1.25rem;
-		      --normal-font-size: 1rem;
-		      --small-font-size: .875rem;
-		      --smaller-font-size: .813rem;
-		   }
-		}
-		/* end responsive typography */
-
-		/* ===== BASE ===== */
-		*{
-		   box-sizing: border-box;
-		   padding: 0;
-		   margin: 0;
-		}
-		html{
-		   scroll-behavior: smooth;
-		}
-		body{
-		   font-family: var(--text-font);
-		   font-size: var(--normal-font-size);
-		   background-color: var(--white-color);
-		   color: var(--black-color);
-		}
-		a{
-		   text-decoration: none;
-		}
-		img{
-		   max-width: 100%;
-		   height: auto;
-		}
-		.main{
-		   overflow: hidden !important;
-		}
-		/* ===== end base ===== */
-
-		/* ===== LAYOUT ===== */
-		.container{
-		   max-width: 1024px;
-		   margin-left: var(--mb-1-5);
-		   margin-right: var(--mb-1-5);
-		}
-		.grid{
-		   display: -ms-grid;
-		   display: grid;
-		}
-		/* ===== end layout ===== */
-
-		/* ===== SCROLL BAR ===== */
-		::-webkit-scrollbar{
-		   width: .6rem;
-		   background: hsl(0,0%,74%);
-		}
-		::-webkit-scrollbar-thumb{
-		   background: hsl(0,0%,17%);
-		   border-radius: .5rem;
-		}
-		/* ===== end scroll bar ===== */
-
-		/* ===== DARK THEME ===== */
-		body.dark-theme{
-		   background-color: var(--blue-darker-color);
-		   color: var(--pure-white-color);
-		}
-		.dark-theme .social__media-link,
-		.dark-theme .footer{
-			color: var(--pure-white-color);
-		}
-		/* ===== end dark theme ===== */
-
-		/* ===== BUTTONS ===== */
-		.button{
-			background-color: var(--blue-lightest-color);
-			padding: 0.75rem 1.5rem;
-			-webkit-transition: .3s;
-			transition: .3s;
-			cursor: pointer;
-		}
-		.button:hover{
-			-webkit-transform: translateY(-.5rem);
-			        transform: translateY(-.5rem);
-		}
-		.button:not(:last-child){
-			margin-bottom: var(--mb-1-5);
-		}
-		.links__item{
-			color: var(--pure-white-color);
-		}
-		/* ===== end buttons ====== */
-
-		/* ===== MAIN ===== */
-		.main{
-			position: relative;
-			padding: 2rem 0 2rem;
-		}
-		.nav__theme{
-			position: absolute;
-			top: 2rem;
-			right: 0;
-			font-size: 1.1rem;
-			text-align: right;
-			cursor: pointer;
-		}
-		.main__container{
-			padding-top: 6rem;
-			text-align: center;
-		}
-		.main__images{
-			position: relative;
-			width: 250px;
-			height: 250px;
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: var(--mb-2);
-		}
-		.main__images::before{
-			content: '';
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: -3rem;
-			left: 3rem;
-			background-color: var(--blue-lightest-color);
-		}
-		.main__img{
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			-o-object-fit: cover;
-			   object-fit: cover;
-			-o-object-position: bottom;
-			   object-position: bottom;
-		}
-		.main__title{
-			font-family: var(--title-font);
-			font-size: var(--biggest-font-size);
-			margin-bottom: var(--mb-0-25);
-		}
-		.main__subtitle{
-			display: block;
-			font-size: var(--small-font-size);
-			font-weight: var(--medium-font);
-			margin-bottom: var(--mb-1-5);
-		}
-		.social__media{
-			margin-bottom: var(--mb-2);
-		}
-		.social__media-link{
-			color: var(--black-color);
-			font-size: 1.5rem;
-		}
-		.social__media-link:not(:last-child){
-		   margin-right: .85rem;
-		}
-		.footer{
-			display: block;
-			font-size: var(--smaller-font-size);
-			color: rgba(0,0,0,.5);
-			margin: 3.5rem 0 0;
-		}
-		/* ===== end main ===== */
-
-		/* ===== MEDIA QUERIS ===== */
-		@media screen and (max-width: 320px){
-			/* ===== LAYOUT ===== */
-		   .container{
-		      margin-left: var(--mb-1);
-		      margin-right: var(--mb-1);
-		   }
-		   /* ===== end layout ===== */
-
-			/* ===== MAIN ===== */
-			.main__container{
-				padding-top: 3.5rem;
-			}
-			.main__images{
-				width: 180px;
-				height: 180px;
-			}
-			.main__images:before{
-				top: -1.5rem;
-				left: 1.5rem;
-			}
-		   /* ===== end main ===== */
-		}
-
-		@media screen and (min-width: 768px){
-		   /* ===== MAIN ===== */
-			.main__images{
-				width: 350px;
-				height: 350px;
-			}
-		   /* ===== end main ===== */
-		}
-
-		/* For large devices */
-		@media screen and (min-width: 992px){
-		   /* ===== LAYOUT ===== */
-		   .container{
-		      margin-left: auto;
-		      margin-right: auto;
-		   }
-		   /* ===== end layout ===== */
-		}
-		/* ===== end media queris ===== */
-	</style>
-	<!-- ===== end main css ===== -->
-
 	<title>Nelly Yusnita</title>
 </head>
 <body>
-	<!-- ==== MAIN ===== -->
+	<!-- ===== MAIN ===== -->
 	<main class="main container">
-		<div class="nav__theme">
-			<i class='bx bx-moon change-theme' id="theme-button"></i>
-		</div>
-
 		<div class="main__container">
-			<div class="main__images">
-				<img src="assets/img/profile.jpg" alt="" class="main__img">
-			</div>
+			<img src="assets/img/profile.jpg" alt="" class="profile__img">
+
 			<h1 class="main__title">Nelly Yusnita</h1>
-			<span class="main__subtitle">Economy Teacher<br>Freelance Frontend Developer</span>
+			<span class="main__subtitle">Economics Education Department<br>Freelance Frontend Developer</span>
+
 			<div class="social__media">
-				<a href="https://www.instagram.com/nellyyusnita_/" class="social__media-link"><i class='bx bxl-instagram'></i></a>
-				<a href="https://www.facebook.com/profile.php?id=100009298274433" class="social__media-link"><i class='bx bxl-facebook'></i></a>
-				<a href="https://www.tiktok.com/@nelly_yusnita" class="social__media-link"><i class='bx bxl-tiktok'></i></a>
-				<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="social__media-link"><i class='bx bxl-youtube'></i></a>
+				<a href="https://www.instagram.com/nellyyusnita_/" class="social__media-link" target="_blank"><i class='bx bxl-instagram'></i></a>
+				<a href="https://www.facebook.com/profile.php?id=100009298274433" class="social__media-link" target="_blank"><i class='bx bxl-facebook'></i></a>
+				<a href="https://www.tiktok.com/@nelly_yusnita" class="social__media-link" target="_blank"><i class='bx bxl-tiktok'></i></a>
+				<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="social__media-link" target="_blank"><i class='bx bxl-youtube'></i></a>
 			</div>
+
 			<div class="main__links">
-				<div class="button">
-					<a href="https://nelly-yusnita.github.io/portfolio/" class="links__item">My Portfolio</a>
+				<div class="link__button link__button-1">
+					<a href="https://nelly-yusnita.github.io/portfolio/" class="link__item-1" target="_blank">My Portfolio</a>
 				</div>
-				<div class="button">
-					<a href="https://undang-digital-aja.github.io/main/" class="links__item">Visit My Online Store</a>
+
+				<div class="link__button link__button-2">
+					<a href="https://undang-digital-aja.github.io/main/" class="link__item-2" target="_blank">Wedding Invitation</a>
 				</div>
-				<div class="button">
-					<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="links__item">Tutorials</a>
+
+				<div class="link__button link__button-3">
+					<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="link__item-3" target="_blank">Tutorials</a>
 				</div>
 			</div>
+
+			<div class="hobbies grid">
+				<div class="hobby__box">
+					<img src="assets/img/hobby1.jpg" alt="" class="hobby__img">
+					<span class="hobby__description">ngoding</span>
+				</div>
+
+				<div class="hobby__box">
+					<img src="assets/img/hobby2.jpg" alt="" class="hobby__img">
+					<span class="hobby__description">nonton</span>
+				</div>
+
+				<div class="hobby__box">
+					<img src="assets/img/hobby3.jpg" alt="" class="hobby__img">
+					<span class="hobby__description">tidur</span>
+				</div>
+			</div>
+
 			<span class="footer">&#169;2022 By Nelly Yusnita</span>
 		</div>
 	</main>
-	<!-- ==== end main ===== -->
-
-	<!-- ===== AOS ANIMATE JS ===== -->
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-	<!-- ===== MAIN JAVASCRIPT ===== -->
-	<script>
-		// ===== DARK LIGHT THEME ===== //
-		const themeButton = document.getElementById('theme-button');
-		const darkTheme = 'dark-theme';
-		const iconTheme = 'bx-sun';
-
-		const selectedTheme = localStorage.getItem('selected-theme');
-		const selectedIcon = localStorage.getItem('selected-icon');
-
-		const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-		const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
-
-		if (selectedTheme) {
-			document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-			themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
-		}
-
-		themeButton.addEventListener('click', () => {
-			document.body.classList.toggle(darkTheme)
-			themeButton.classList.toggle(iconTheme)
-
-			localStorage.setItem('selected-theme', getCurrentTheme())
-			localStorage.setItem('selected-icon', getCurrentIcon())
-		})
-		// ===== end dark light theme ===== //
-	</script>	
-	<!-- ===== end main javascript ===== -->
+	<!-- ===== end main ===== -->
 </body>
 </html>

@@ -1,0 +1,260 @@
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ===== VARIABLES CSS ===== */
+:root{
+	/* ===== Colors ===== */
+	--body-color: #FAFAFF;
+	--text-color: #141414;
+
+   /* ===== Font and Typography ===== */
+   --title-font: 'Abril Fatface', cursive;
+   --text-font: 'Poppins', sans-serif;
+   --big-font-size: 2.5rem;
+   --h1-font-size: 1.4rem;
+   --h2-font-size: 1.25rem;
+   --h3-font-size: 1rem;
+   --normal-font-size: .938rem;
+   --small-font-size: .813rem;
+   --smaller-font-size: .75rem;
+
+   /* ===== Font Weight ===== */
+   --regular-font: 400;
+   --medium-font: 500;
+   --semi-bold-font: 600;
+   --bold-font: 700;
+}
+/* ===== end variables css ===== */
+
+/* Responsive Typography */
+@media screen and (min-width: 768px){
+   :root{
+      --big-font-size: 3.25rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+   }
+}
+/* end responsive typography */
+
+/* ===== BASE ===== */
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+html{
+   scroll-behavior: smooth;
+}
+body{
+   font-family: var(--text-font);
+   font-size: var(--normal-font-size);
+   background-color: var(--body-color);
+   color: var(--text-color);
+}
+a{
+   text-decoration: none;
+}
+img{
+   max-width: 100%;
+   height: auto;
+}
+/* ===== end base ===== */
+
+/* ===== LAYOUT ===== */
+.container{
+   max-width: 1024px;
+   margin-left: 1.5rem;
+   margin-right: 1.5rem;
+}
+.grid{
+   display: -ms-grid;
+   display: grid;
+}
+/* ===== end layout ===== */
+
+/* ===== SCROLL BAR ===== */
+::-webkit-scrollbar{
+   width: .6rem;
+   background: hsl(0,0%,74%);
+}
+::-webkit-scrollbar-thumb{
+   background: hsl(0,0%,17%);
+}
+/* ===== end scroll bar ===== */
+
+/* ===== MAIN ===== */
+.main{
+	padding: 4rem 0 2rem;
+}
+.main__container{
+	text-align: center;
+}
+.profile__img{
+   width: 220px;
+   border-radius: 1.5rem;
+   margin-bottom: 1rem;
+}
+.main__title{
+	font-family: var(--title-font);
+	font-size: var(--big-font-size);
+	margin-bottom: .5rem;
+}
+.main__subtitle{
+	display: block;
+   font-size: var(--smaller-font-size);
+   margin-bottom: 2rem;
+}
+.social__media{
+	margin-bottom: 2rem;
+}
+.social__media-link{
+	color: var(--text-color);
+	font-size: 1.5rem;
+}
+.social__media-link:not(:last-child){
+   margin-right: .85rem;
+}
+.main__links{
+	margin-bottom: 4.5rem;
+}
+.link__button{
+	height: 75px;
+	border-radius: 1.5rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	font-weight: var(--semi-bold-font);
+	cursor: pointer;
+}
+.link__button-1{
+	background-color: #EEEEEE;
+	position: relative;
+	z-index: 15;
+}
+.link__item-1{
+	color: var(--text-color);
+}
+.link__button-2{
+	background-color: #398AB9;
+	margin-top: -1rem;
+	position: relative;
+	z-index: 10;
+	height: 80px;
+}
+.link__item-2,
+.link__item-3{
+	color: #FFF;
+	margin-bottom: -.75rem;
+}
+.link__button-3{
+	background-color: #1C658C;
+	margin-top: -1rem;
+	position: relative;
+	z-index: 5;
+	height: 80px;
+}
+.hobbies{
+	grid-gap: 2rem 1rem;
+}
+.hobby__img{
+	border-radius: 1rem;
+}
+.hobby__description{
+	display: block;
+	font-weight: var(--semi-bold-font);
+}
+.footer{
+	display: block;
+	font-size: var(--smaller-font-size);
+	color: rgba(0,0,0,.5);
+	margin: 3.5rem 0 0;
+}
+/* ===== end main ===== */
+
+/* ===== MEDIA QUERIS ===== */
+@media screen and (max-width: 320px){
+   /* ===== LAYOUT ===== */
+   .container{
+      margin-left: 1rem;
+      margin-right: 1rem;
+   }
+   /* ===== end layout ===== */
+
+   /* ===== MAIN ===== */
+   .hobbies{
+   	-ms-grid-columns: (1fr)[2];
+   	    grid-template-columns: repeat(2,1fr);
+   }
+   /* ===== end main ===== */
+}
+
+@media screen and (min-width: 321px){
+	/* ===== MAIN ===== */
+	.hobbies{
+		-ms-grid-columns: (160px)[2];
+		    grid-template-columns: repeat(2,160px);
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+	/* ===== end main ===== */
+}
+
+@media screen and (min-width: 550px){
+	/* ===== MAIN ===== */
+	.hobbies{
+		-ms-grid-columns: (160px)[3];
+		    grid-template-columns: repeat(3,160px);
+	}
+	/* ===== end main ===== */
+}
+
+@media screen and (min-width: 632px){
+	/* ===== MAIN ===== */
+	.hobbies{
+		grid-column-gap: 1.5rem;
+	}
+	/* ===== MAIN ===== */
+}
+
+@media screen and (min-width: 768px){
+   /* ===== MAIN ===== */
+	.main{
+      padding-top: 5.5rem;
+   }
+   .hobbies{
+   	-ms-grid-columns: (150px)[3];
+   	    grid-template-columns: repeat(3,150px);
+   	grid-column-gap: 1.5rem;
+   	-webkit-box-pack: center;
+   	    -ms-flex-pack: center;
+   	        justify-content: center;
+   }
+   /* ===== end main ===== */
+}
+
+/* For large devices */
+@media screen and (min-width: 992px){
+   /* ===== LAYOUT ===== */
+   .container{
+      margin-left: auto;
+      margin-right: auto;
+   }
+   /* ===== end layout ===== */
+
+   /* ===== MAIN ===== */
+   .profile__img{
+      width: 350px;
+   }
+   /* ===== end main ===== */
+}
