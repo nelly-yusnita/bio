@@ -3,9 +3,9 @@
 
 /* ===== VARIABLES CSS ===== */
 :root{
-	/* ===== Colors ===== */
-	--body-color: #FAFAFF;
-	--text-color: #141414;
+   /* ===== Colors ===== */
+   --body-color: #FAFAFF;
+   --text-color: #141414;
 
    /* ===== Font and Typography ===== */
    --title-font: 'Abril Fatface', cursive;
@@ -88,10 +88,10 @@ img{
 
 /* ===== MAIN ===== */
 .main{
-	padding: 4rem 0 2rem;
+   padding: 4.5rem 0 2rem;
 }
 .main__container{
-	text-align: center;
+   text-align: center;
 }
 .profile__img{
    width: 220px;
@@ -99,146 +99,149 @@ img{
    margin-bottom: 1rem;
 }
 .main__title{
-	font-family: var(--title-font);
-	font-size: var(--big-font-size);
-	margin-bottom: .5rem;
+   font-family: var(--title-font);
+   font-size: var(--big-font-size);
+   margin-bottom: .5rem;
 }
 .main__subtitle{
-	display: block;
+   display: block;
    font-size: var(--smaller-font-size);
    margin-bottom: 2rem;
 }
 .social__media{
-	margin-bottom: 2rem;
+   margin-bottom: 2rem;
 }
 .social__media-link{
-	color: var(--text-color);
-	font-size: 1.5rem;
+   color: var(--text-color);
+   font-size: 1.5rem;
 }
 .social__media-link:not(:last-child){
    margin-right: .85rem;
 }
 .main__links{
-	margin-bottom: 4.5rem;
+   margin-bottom: 4.5rem;
 }
 .link__button{
-	height: 75px;
-	border-radius: 1.5rem;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	font-weight: var(--semi-bold-font);
-	cursor: pointer;
+   height: 75px;
+   border-radius: 1.5rem;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   font-weight: var(--semi-bold-font);
+   width: 100%;
+   cursor: pointer;
 }
 .link__button-1{
-	background-color: #EEEEEE;
-	position: relative;
-	z-index: 15;
+   background-color: #EEEEEE;
+   position: relative;
+   z-index: 15;
 }
 .link__item-1{
-	color: var(--text-color);
+   color: var(--text-color);
 }
 .link__button-2{
-	background-color: #398AB9;
-	margin-top: -1rem;
-	position: relative;
-	z-index: 10;
-	height: 80px;
+   background-color: #398AB9;
+   margin-top: -1rem;
+   position: relative;
+   z-index: 10;
+   height: 80px;
 }
 .link__item-2,
 .link__item-3{
-	color: #FFF;
-	margin-bottom: -.75rem;
+   color: #FFF;
+   margin-bottom: -.75rem;
 }
 .link__button-3{
-	background-color: #1C658C;
-	margin-top: -1rem;
-	position: relative;
-	z-index: 5;
-	height: 80px;
+   background-color: #1C658C;
+   margin-top: -1rem;
+   position: relative;
+   z-index: 5;
+   height: 80px;
 }
 .hobbies{
-	grid-gap: 2rem 1rem;
+   grid-gap: 2rem 1rem;
 }
 .hobby__img{
-	border-radius: 1rem;
+   border-radius: 1rem;
 }
 .hobby__description{
-	display: block;
-	font-weight: var(--semi-bold-font);
+   display: block;
+   font-weight: var(--semi-bold-font);
 }
 .footer{
-	display: block;
-	font-size: var(--smaller-font-size);
-	color: rgba(0,0,0,.5);
-	margin: 3.5rem 0 0;
+   display: block;
+   font-size: var(--smaller-font-size);
+   color: rgba(0,0,0,.5);
+   margin: 3.5rem 0 0;
 }
 /* ===== end main ===== */
 
 /* ===== MEDIA QUERIS ===== */
-@media screen and (max-width: 320px){
+@media screen and (max-width: 341px){
+   /* ===== MAIN ===== */
+   .hobbies{
+      -ms-grid-columns: (1fr)[2];
+          grid-template-columns: repeat(2,1fr);
+   }
+   /* ===== end main ===== */
+}
+
+@media screen and (max-width: 400px){
    /* ===== LAYOUT ===== */
    .container{
       margin-left: 1rem;
       margin-right: 1rem;
    }
    /* ===== end layout ===== */
+}
 
+@media screen and (min-width: 342px){
    /* ===== MAIN ===== */
    .hobbies{
-   	-ms-grid-columns: (1fr)[2];
-   	    grid-template-columns: repeat(2,1fr);
+      -ms-grid-columns: (145px)[2];
+          grid-template-columns: repeat(2,145px);
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
    }
    /* ===== end main ===== */
 }
 
-@media screen and (min-width: 321px){
-	/* ===== MAIN ===== */
-	.hobbies{
-		-ms-grid-columns: (160px)[2];
-		    grid-template-columns: repeat(2,160px);
-		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
-	}
-	/* ===== end main ===== */
-}
-
 @media screen and (min-width: 550px){
-	/* ===== MAIN ===== */
-	.hobbies{
-		-ms-grid-columns: (160px)[3];
-		    grid-template-columns: repeat(3,160px);
-	}
-	/* ===== end main ===== */
+   /* ===== MAIN ===== */
+   .hobbies{
+      -ms-grid-columns: (160px)[3];
+          grid-template-columns: repeat(3,160px);
+   }
+   /* ===== end main ===== */
 }
 
 @media screen and (min-width: 632px){
-	/* ===== MAIN ===== */
-	.hobbies{
-		grid-column-gap: 1.5rem;
-	}
-	/* ===== MAIN ===== */
+   /* ===== MAIN ===== */
+   .hobbies{
+      grid-column-gap: 1.5rem;
+   }
+   /* ===== MAIN ===== */
 }
 
 @media screen and (min-width: 768px){
    /* ===== MAIN ===== */
-	.main{
+   .main{
       padding-top: 5.5rem;
    }
    .hobbies{
-   	-ms-grid-columns: (150px)[3];
-   	    grid-template-columns: repeat(3,150px);
-   	grid-column-gap: 1.5rem;
-   	-webkit-box-pack: center;
-   	    -ms-flex-pack: center;
-   	        justify-content: center;
+      -ms-grid-columns: (150px)[3];
+          grid-template-columns: repeat(3,150px);
+      grid-column-gap: 1.5rem;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
    }
    /* ===== end main ===== */
 }
