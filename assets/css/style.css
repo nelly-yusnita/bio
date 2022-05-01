@@ -93,10 +93,25 @@ img{
 .main__container{
    text-align: center;
 }
+.main__handle{
+   width: 235px;
+   height: 300px;
+   border: 3.5px solid #90AACB;
+   border-radius: 10rem 10rem 1rem 1rem;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   margin: 0 auto 2rem;
+}
 .profile__img{
    width: 220px;
-   border-radius: 1.5rem;
-   margin-bottom: 1rem;
+   border-radius: 10rem 10rem 1rem 1rem;
 }
 .main__title{
    font-family: var(--title-font);
@@ -256,8 +271,12 @@ img{
    /* ===== end layout ===== */
 
    /* ===== MAIN ===== */
+   .main__handle{
+      width: 340px;
+      height: 437px;
+   }
    .profile__img{
-      width: 350px;
+      width: 325px;
    }
    /* ===== end main ===== */
 }
