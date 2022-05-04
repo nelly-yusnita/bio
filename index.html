@@ -4,69 +4,102 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- ===== FAVICON ==== -->
+	<!-- ===== FAVICON ===== -->
 	<link rel="shortcut icon" href="assets/img/favicon.jpg" type="image/x-icon">
 
-	<!-- ===== MAIN CSS ===== -->
-	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- ===== REMIX ICONS ===== -->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
 	<!-- ===== BOXICONS ===== -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-	<title>Nelly Yusnita</title>
+	<!-- ===== MAIN CSS ===== -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<title>Nelly Yusnita - Mini Bio</title>
 </head>
 <body>
-	<!-- ===== MAIN ===== -->
-	<main class="main container">
-		<div class="main__container">
-			<div class="main__handle">
-				<img src="assets/img/profile.jpg" alt="" class="profile__img">
-			</div>
+	<!-- ===== HEADER ===== -->
+	<header class="profile container">
+		<!-- Theme button -->
+		<i class="ri-moon-line change-theme" id="theme-button"></i>
 
-			<h1 class="main__title">Nelly Yusnita</h1>
-			<span class="main__subtitle">Economics Education Department<br>Freelance Frontend Developer</span>
-
-			<div class="social__media">
-				<a href="https://www.instagram.com/nellyyusnita_/" class="social__media-link" target="_blank"><i class='bx bxl-instagram'></i></a>
-				<a href="https://www.facebook.com/profile.php?id=100009298274433" class="social__media-link" target="_blank"><i class='bx bxl-facebook'></i></a>
-				<a href="https://www.tiktok.com/@nelly_yusnita" class="social__media-link" target="_blank"><i class='bx bxl-tiktok'></i></a>
-				<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="social__media-link" target="_blank"><i class='bx bxl-youtube'></i></a>
-			</div>
-
-			<div class="main__links">
-				<div class="link__button link__button-1">
-					<a href="https://nelly-yusnita.github.io/portfolio/" class="link__item-1" target="_blank">My Portfolio</a>
+		<div class="profile__container grid">
+			<div class="profile__data">
+				<div class="profile__border">
+					<img src="assets/img/profile.jpg" alt="" class="profile__img">
+					<span class="profile__subtitle">Hi there!</span>
 				</div>
 
-				<div class="link__button link__button-2">
-					<a href="https://undang-digital-aja.github.io/main/" class="link__item-2" target="_blank">Digital Invitation</a>
-				</div>
+				<h2 class="profile__name">Nelly Yusnita</h2>
+				<span class="profile__profession">Freelance Junior Frontend Developer</span>
+				<span class="profile__major">Economics Education Department</span>
 
-				<div class="link__button link__button-3">
-					<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="link__item-3" target="_blank">Tutorials</a>
-				</div>
-			</div>
+				<div class="profile__buttons">
+					<!-- Instagram -->
+					<a href="https://www.instagram.com/nellyyusnita_/" class="button" target="_blank">
+						<i class='bx bxl-instagram'></i>
+					</a>
 
-			<div class="hobbies grid">
-				<div class="hobby__box">
-					<img src="assets/img/hobby1.jpg" alt="" class="hobby__img">
-					<span class="hobby__description">ngoding</span>
-				</div>
+					<!-- TikTok -->
+					<a href="https://www.tiktok.com/@nelly_yusnita" class="button" target="_blank">
+						<i class='bx bxl-tiktok'></i>
+					</a>
 
-				<div class="hobby__box">
-					<img src="assets/img/hobby2.jpg" alt="" class="hobby__img">
-					<span class="hobby__description">nonton</span>
-				</div>
-
-				<div class="hobby__box">
-					<img src="assets/img/hobby3.jpg" alt="" class="hobby__img">
-					<span class="hobby__description">tidur</span>
+					<!-- Facebook -->
+					<a href="https://www.facebook.com/profile.php?id=100009298274433" class="button" target="_blank">
+						<i class='bx bxl-facebook'></i>
+					</a>
 				</div>
 			</div>
 
-			<span class="footer">&#169;2022 - By Nelly Yusnita</span>
+			<div class="main grid">
+				<div class="content__item-links">
+					<!-- Portfolio -->
+					<div class="content__item content__item-1">
+						<a href="https://nelly-yusnita.github.io/portfolio/" class="content__item-link1" target="_blank">My Portfolio</a>
+					</div>
+
+					<!-- Undang Digital Aja -->
+					<div class="content__item content__item-2">
+						<a href="https://undang-digital-aja.github.io/main/" class="content__item-link2" target="_blank">Digital Invitation</a>
+					</div>
+
+					<!-- Youtube Channel -->
+					<div class="content__item content__item-3">
+						<a href="https://www.youtube.com/channel/UCgKHU1zY53lapz1ehpUZcRQ" class="content__item-link3" target="_blank">Nelly Channel</a>
+					</div>
+				</div>
+
+				<div class="hobbies grid">
+					<div class="hobby__box">
+						<img src="assets/img/hobby1.jpg" alt="" class="hobby__img">
+						<span class="hobby__description">ngoding</span>
+					</div>
+
+					<div class="hobby__box">
+						<img src="assets/img/hobby2.jpg" alt="" class="hobby__img">
+						<span class="hobby__description">nonton</span>
+					</div>
+
+					<div class="hobby__box">
+						<img src="assets/img/hobby3.jpg" alt="" class="hobby__img">
+						<span class="hobby__description">tidur</span>
+					</div>
+				</div>
+			</div>
 		</div>
-	</main>
-	<!-- ===== end main ===== -->
+	</header>
+	<!-- ===== end header ===== -->
+
+	<span class="footer container">&#169;2022 - By Nelly Yusnita</span>
+
+	<!-- ===== MAIN =====  -->
+
+	<!-- ===== SCROLL REVEAL ===== -->
+	<script src="assets/js/scrollreveal.min.js"></script>
+
+	<!-- ===== MAIN JS ===== -->
+	<script src="assets/js/script.js"></script>
 </body>
 </html>
