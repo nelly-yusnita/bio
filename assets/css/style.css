@@ -1,5 +1,5 @@
-/* ===== GOOGLE FONTS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;500;600;700&display=swap');
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /* ===== FONT FACE ===== */
 @font-face{
@@ -19,7 +19,6 @@
 
 	/* ===== Font and typography ===== */
 	--body-font: 'Poppins', sans-serif;
-	--title-font: 'Abril Fatface', cursive;
 	--special-font: 'modernline_-_personal_useRg';
 	--big-font-size: 2rem;
    --h1-font-size: 1.4rem;
@@ -124,12 +123,6 @@ body.dark-theme{
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-column-gap: .5rem;
-	   -moz-column-gap: .5rem;
-	        column-gap: .5rem;
 	background-color: hsl(207,8%,92%);
 	color: var(--text-color);
 	padding: 0.75rem;
@@ -138,7 +131,7 @@ body.dark-theme{
 	transition: .3s;
 }
 .button i{
-	font-size: 1.25rem;
+	font-size: 1.35rem;
 }
 .button:hover{
 	background-color: hsl(207,8%,75%);
@@ -149,6 +142,7 @@ body.dark-theme{
 .profile{
 	position: relative;
 	padding: 4.5rem 0 3.5rem;
+	overflow: hidden;
 }
 .profile__container{
 	grid-row-gap: 3rem;
@@ -159,12 +153,10 @@ body.dark-theme{
 .profile__border{
 	position: relative;
 	width: 220px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto .75rem;
 }
 .profile__img{
    border-radius: 10rem 10rem 1rem 1rem;
-   margin-bottom: .75rem;
 }
 .profile__subtitle{
 	font-family: var(--special-font);
@@ -179,7 +171,6 @@ body.dark-theme{
 	margin-top: 1rem;
 }
 .profile__name{
-	font-family: var(--title-font);
 	font-size: var(--h2-font-size);
 	margin-bottom: .5rem;
 }
@@ -189,7 +180,23 @@ body.dark-theme{
 	font-size: var(--smaller-font-size);
 }
 .profile__major{
+	margin-bottom: 0.5rem;
+}
+.profile__address{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	margin-bottom: 2rem;
+	font-size: var(--smaller-font-size);
+}
+.profile__icon{
+	width: 20px;
 }
 .profile__buttons{
 	display: -webkit-box;
@@ -406,5 +413,22 @@ body.dark-theme{
           grid-template-columns: repeat(3,125px);
    }
 	/* ===== end main ===== */
+}
+
+/* For 2K & 4K resolutions */
+@media screen and (min-width: 2048px){
+	/* ===== BASE ===== */
+	body{
+   	zoom: 1.5;
+   }
+   /* ===== end base ===== */
+}
+
+@media screen and (min-width: 3848px){
+	/* ===== BASE ===== */
+   body{
+      zoom: 3;
+   }
+   /* ===== end base ===== */
 }
 
