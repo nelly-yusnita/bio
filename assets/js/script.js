@@ -37,6 +37,6 @@ sr.reveal(`.profile__profession`, {delay: 600});
 sr.reveal(`.profile__major`, {delay: 700});
 sr.reveal(`.profile__address`, {delay: 700});
 sr.reveal(`.profile__buttons`, {delay: 800});
-sr.reveal(`.content__item-links`, {delay: 800});
+sr.reveal(`.content__list`, {delay: 800});
 sr.reveal(`.hobby__box`, {interval: 50, delay: 900});
 // ===== end scroll reveal animation ===== //

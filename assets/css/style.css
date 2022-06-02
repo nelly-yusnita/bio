@@ -110,7 +110,7 @@ body.dark-theme{
 	background-color: hsl(207,24%,16%);
 	color: #FFF;
 }
-.dark-theme .content__item-link1{
+.dark-theme .content__item-1{
 	color: #141414;
 }
 .dark-theme .footer{
@@ -219,7 +219,7 @@ body.dark-theme{
 	grid-row-gap: 4.25rem;
 }
 .content__item{
-   height: 75px;
+	height: 75px;
    border-radius: 1.5rem;
    display: -webkit-box;
    display: -ms-flexbox;
@@ -237,10 +237,8 @@ body.dark-theme{
 .content__item-1{
 	position: relative;
 	background-color: #EEEEEE;
-   z-index: 15;
-}
-.content__item-link1{
 	color: var(--text-color);
+   z-index: 15;
 }
 .content__item-2{
 	position: relative;
@@ -256,9 +254,10 @@ body.dark-theme{
    z-index: 5;
    height: 80px;
 }
-.content__item-link2,
-.content__item-link3{
-   color: #FFF;
+.content__item-2 span,
+.content__item-3 span{
+	display: block;
+	color: #FFF;
    margin-bottom: -.75rem;
 }
 .hobbies{
